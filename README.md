@@ -1,6 +1,8 @@
 # Snow's personal portfolio!
 Interactive website using Three.js
 
+Current result: https://i.imgur.com/6KyuNcp.gif
+
 To run:
 npm install
 npm start
