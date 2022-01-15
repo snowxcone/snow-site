@@ -1,6 +1,10 @@
 # Snow's personal portfolio!
 Interactive website using Three.js
 
+To run:
+npm install
+npm start
+
 Bookmarked references
 * https://codeworkshop.dev/blog/2020-04-03-adding-orbit-controls-to-react-three-fiber/
 * https://www.youtube.com/watch?v=Q7AOvWpIVHU
