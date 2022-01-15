@@ -69,7 +69,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      favicon: './src/static/images/coco.jpg',
+      favicon: './src/static/images/shook.png',
     }),
   ],
 };
