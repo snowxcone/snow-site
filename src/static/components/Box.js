@@ -1,17 +1,24 @@
-/* eslint-disable no-param-reassign */
 import React, { useRef, useState } from 'react';
-import { useFrame } from '@react-three/fiber';
 
 const Box = (props) => {
-  const mesh = useRef();
+  const boxRef = useRef();
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
-  // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => { mesh.current.rotation.x += 0.01; });
+
+  const [rotationX, setRotationX] = useState(0);
+  const [rotationY, setRotationY] = useState(0);
+
+  document.body.onwheel = () => {
+    setRotationX((r) => r + 0.1);
+    setRotationY((r) => r + 0.1);
+  };
+
   return (
     <mesh
+      rotation-x={rotationX}
+      rotation-y={rotationY}
       position={props.position}
-      ref={mesh}
+      ref={boxRef}
       scale={active ? 1.5 : 1}
       onClick={(event) => setActive(!active)}
       onPointerOver={(event) => setHover(true)}
